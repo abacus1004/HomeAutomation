@@ -1,0 +1,11 @@
+/Users/manohar.a/repos/homeautomation/src/main/java/com/project/homeautomation/dao/UpdateDevicesDao.java
+/Users/manohar.a/repos/homeautomation/src/main/java/com/project/homeautomation/controllers/DevicesController.java
+/Users/manohar.a/repos/homeautomation/src/main/java/com/project/homeautomation/datamodel/mysql/dto/DevicesDto.java
+/Users/manohar.a/repos/homeautomation/src/main/java/com/project/homeautomation/interceptors/RequestStatisticsInterceptor.java
+/Users/manohar.a/repos/homeautomation/src/main/java/com/project/homeautomation/bo/DeviceBo.java
+/Users/manohar.a/repos/homeautomation/src/main/java/com/project/homeautomation/service/DevicesService.java
+/Users/manohar.a/repos/homeautomation/src/main/java/com/project/homeautomation/dao/GetDevicesDao.java
+/Users/manohar.a/repos/homeautomation/src/main/java/com/project/homeautomation/App.java
+/Users/manohar.a/repos/homeautomation/src/main/java/com/project/homeautomation/facade/DevicesFacade.java
+/Users/manohar.a/repos/homeautomation/src/main/java/com/project/homeautomation/config/HomeAutomationConfig.java
+/Users/manohar.a/repos/homeautomation/src/main/java/com/project/homeautomation/datamodel/mysql/dto/base/TranslatableEntity.java
