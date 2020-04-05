@@ -25,13 +25,24 @@ import java.util.List;
         return "device Added Successfully";
     }
 
-    public String deleteDevice(String deviceId){
-        devicesDao.deleteDevice(deviceId);
+    public String deleteDevice(Long deviceId){
 
-        return "device Deleted Successfully";
+        if(getDevicesDao.findByDeviceId(deviceId).size()>0){
+            devicesDao.deleteDevice(deviceId);
+            return "device Deleted Successfully";
+        }
+
+        return "This device doesn't exist";
+
+
     }
 
-    public String performOperation(String userId, String deviceId, String operation){
+    public String performOperation(String userId, Long deviceId, String operation){
+
+        if(getDevicesDao.findByUserIdAndDeviceId(userId, deviceId).size()==0){
+            return "This device doesn't exist";
+        }
+
         if(operation.equals("on")){
             return "device turned on successfully";
         }

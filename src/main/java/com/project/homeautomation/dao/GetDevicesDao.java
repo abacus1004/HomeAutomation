@@ -9,4 +9,8 @@ public interface GetDevicesDao extends
         CrudRepository<DevicesDto, Long> {
 
     List<DevicesDto> findByUserId(String userId);
+
+    List<DevicesDto> findByDeviceId(Long deviceId);
+
+    List<DevicesDto> findByUserIdAndDeviceId(String userId, Long deviceId);
 }

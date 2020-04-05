@@ -48,12 +48,12 @@ public class BasicRestTest {
         }
     }
 
-    protected <T> ResponseEntity<T> postCall(String url, Object object, Class<T> clazz) {
+    protected <T> ResponseEntity<T> postCall(String url, Class<T> clazz) {
         RestTemplate restTemplate = new RestTemplate();
         try {
             URI uri = new URI(getBaseUrl() + url);
             logger.info("trying post call to: {}", uri);
-            ResponseEntity<T> forEntity = restTemplate.exchange(uri, HttpMethod.POST, setHeaders(object), clazz);
+            ResponseEntity<T> forEntity = restTemplate.exchange(uri, HttpMethod.POST, null, clazz);
             logger.info("call response: {}", forEntity);
             return forEntity;
 

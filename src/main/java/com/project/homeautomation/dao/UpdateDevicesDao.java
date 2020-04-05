@@ -22,7 +22,7 @@ import java.util.Map;
     }
 
     @Loggable
-    public void deleteDevice(String deviceId) {
+    public void deleteDevice(Long deviceId) {
         String query = "delete from homeautomation.devices where deviceId=:deviceId;";
         Map<String, Object> parameters = new HashMap<String, Object>();
         parameters.put("deviceId", deviceId);

@@ -16,7 +16,7 @@ import java.util.List;
 public class DevicesController {
     @RequestMapping(path = "/ping", method = RequestMethod.GET)
     public String ping() {
-        return "If you ping me, I will ping you back!";
+        return "I am alive!";
     }
 
     @Autowired private DevicesFacade devicesFacade;
@@ -30,9 +30,8 @@ public class DevicesController {
         return devices;
     }
 
-    // make this post API
     @ApiOperation("Add a new Device")
-    @GetMapping("add/{userId}/{deviceName}") @ResponseBody
+    @RequestMapping(path = "add/{userId}/{deviceName}",method = RequestMethod.POST)
     public String addNewDevice(HttpServletRequest request,
                                        @PathVariable("userId") String userId,
                                        @PathVariable("deviceName") String deviceName) {
@@ -42,19 +41,19 @@ public class DevicesController {
     }
 
     @ApiOperation("Delete Device")
-    @GetMapping("delete/{deviceId}") @ResponseBody
+    @RequestMapping(path = "delete/{deviceId}",method = RequestMethod.DELETE)
     public String deleteDevice(HttpServletRequest request,
-                               @PathVariable("deviceId") String deviceId) {
+                               @PathVariable("deviceId") Long deviceId) {
 
         String message = devicesFacade.deleteDevice(deviceId);
         return message;
     }
 
     @ApiOperation("Operation on a Device")
-    @GetMapping("operation/{userId}/{deviceId}/{operation}") @ResponseBody
+    @RequestMapping(path = "operation/{userId}/{deviceId}/{operation}",method = RequestMethod.POST)
     public String performOperation(HttpServletRequest request,
                                    @PathVariable("userId") String userId,
-                                   @PathVariable("deviceId") String deviceId,
+                                   @PathVariable("deviceId") Long deviceId,
                                    @PathVariable("operation") String operation) {
 
         String message = devicesFacade.performOperation(userId, deviceId, operation);

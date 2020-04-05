@@ -3,6 +3,7 @@ package com.project.homeautomation;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.project.homeautomation.bo.DeviceBo;
+import com.project.homeautomation.service.DevicesService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -17,6 +18,8 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 @RunWith(SpringRunner.class) @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 public class DevicesTest extends BasicRestTest {
+
+    private DevicesService devicesService;
 
     @Test public void testGetDeviceWithValidUserId() throws IOException {
         String userId = "6c57599f-2c43-4c82-806a-e07c3410f5d3";
@@ -42,7 +45,5 @@ public class DevicesTest extends BasicRestTest {
         assertThat(deviceBo2.getDeviceName()).isEqualTo("Laptop");
         assertThat(deviceBo2.getUserId()).isEqualTo("6c57599f-2c43-4c82-806a-e07c3410f5d3");
         }
-
-
 
 }

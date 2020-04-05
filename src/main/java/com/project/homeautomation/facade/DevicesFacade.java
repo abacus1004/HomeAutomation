@@ -32,14 +32,14 @@ import java.util.List;
         return messaage;
     }
 
-    public String deleteDevice(String deviceId) {
+    public String deleteDevice(Long deviceId) {
 
         String messaage = devicesService.deleteDevice(deviceId);
 
         return messaage;
     }
 
-    public String performOperation(String userId, String deviceId, String operation) {
+    public String performOperation(String userId, Long deviceId, String operation) {
 
         String messaage = devicesService.performOperation(userId, deviceId, operation);
 

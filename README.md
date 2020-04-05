@@ -1,9 +1,15 @@
 # Home-Automation
 
+Tools Used:
+DataBase: MySQL
+IDE: IntelliJ
+Web Console: Swagger
+
 Setup:
 
 This application uses MySQL DB.
 List of queries to be run in Mysql:
+
 create database homeautomation;
 
 CREATE TABLE homeautomation.`devices` (
@@ -21,18 +27,24 @@ Insert into homeautomation.devices (DeviceName, UserId) values ("TV", "f48fdd16-
 
 change the following In application.properties file:
 
+This config by default uses the DB named homeautomation in mysqsl. Query for DB creation is given in the list of queries above.
+
 1) spring.datasource.url=jdbc:mysql://173.3.0.4/homeautomation?useSSL=false&zeroDateTimeBehavior=convertToNull
 
-This config by default uses the DB named homeautomation in mysqsl. Query for DB creation is given in the list of queries above.
+Provide Mysql Credentials in these configs below. Default username is "username". Default password is "password".
 
 2) spring.datasource.username=username
 3) spring.datasource.password=password
 
-Provide Mysql Credentials in these configs. Default username is "username". Default password is "password".
-
 This Project Supports 4 APIs currently
 
 1) List all smart devices of a user from DB
+    - gives empty response for non-existent or invalid userId
 2) Add new smart device for a user
 3) Remove an installed device for a user
+   - deletes the device, incase the device doesn't exist returns a message saying "deviceId doesn't exist"
 4) Perform an operation on a device
+    - Just logs the action, currently implemented only for on and off operations
+
+Run the Application.
+Swagger has been implemented for this application. Use this to interact with the APIs: http://localhost:8080/swagger-ui.html#/

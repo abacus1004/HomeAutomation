@@ -12,7 +12,7 @@ import javax.persistence.Table;
 public class DevicesDto implements TranslatableEntity {
     private static final long serialVersionUID = -4008459905826449400L;
 
-    public long getDeviceId() {
+    public Long getDeviceId() {
         return deviceId;
     }
 
@@ -38,7 +38,7 @@ public class DevicesDto implements TranslatableEntity {
 
     @Id
     @Column(name = "deviceId")
-    private long deviceId;
+    private Long deviceId;
 
     @Column(name = "deviceName")
     private String deviceName;
