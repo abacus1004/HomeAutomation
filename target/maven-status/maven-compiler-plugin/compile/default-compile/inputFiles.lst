@@ -9,3 +9,4 @@
 /Users/manohar.a/repos/homeautomation/src/main/java/com/project/homeautomation/facade/DevicesFacade.java
 /Users/manohar.a/repos/homeautomation/src/main/java/com/project/homeautomation/config/HomeAutomationConfig.java
 /Users/manohar.a/repos/homeautomation/src/main/java/com/project/homeautomation/datamodel/mysql/dto/base/TranslatableEntity.java
+/Users/manohar.a/repos/homeautomation/src/main/java/com/project/homeautomation/exceptions/base/ErrorStatus.java

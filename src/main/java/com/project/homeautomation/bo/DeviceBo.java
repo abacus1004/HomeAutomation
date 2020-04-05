@@ -1,31 +1,18 @@
 package com.project.homeautomation.bo;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import com.project.homeautomation.datamodel.mysql.dto.DevicesDto;
 
-public class DeviceBo {
-	public String getDeviceName() {
-		return deviceName;
-	}
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
-	public void setDeviceName(String deviceName) {
-		this.deviceName = deviceName;
-	}
 
-	public long getDeviceId() {
-		return deviceId;
-	}
+@Builder
+public @Data @NoArgsConstructor @AllArgsConstructor
+class DeviceBo {
 
-	public void setDeviceId(long deviceId) {
-		this.deviceId = deviceId;
-	}
-
-	public String getUserId() {
-		return userId;
-	}
-
-	public void setUserId(String userId) {
-		this.userId = userId;
-	}
 
 	private String deviceName;
 	private long deviceId;

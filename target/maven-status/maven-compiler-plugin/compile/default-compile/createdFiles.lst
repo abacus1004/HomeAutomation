@@ -5,5 +5,7 @@ com/project/homeautomation/datamodel/mysql/dto/base/TranslatableEntity.class
 com/project/homeautomation/controllers/DevicesController.class
 com/project/homeautomation/service/DevicesService.class
 com/project/homeautomation/datamodel/mysql/dto/DevicesDto.class
+com/project/homeautomation/config/HomeAutomationConfig.class
 com/project/homeautomation/interceptors/RequestStatisticsInterceptor.class
 com/project/homeautomation/dao/GetDevicesDao.class
+com/project/homeautomation/dao/UpdateDevicesDao.class

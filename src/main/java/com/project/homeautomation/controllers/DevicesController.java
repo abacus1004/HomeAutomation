@@ -4,6 +4,8 @@ import com.project.homeautomation.bo.DeviceBo;
 import com.project.homeautomation.facade.DevicesFacade;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
