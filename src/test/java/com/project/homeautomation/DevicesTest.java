@@ -31,8 +31,7 @@ public class DevicesTest extends BasicRestTest {
         assertThat(response.getStatusCode().is2xxSuccessful());
 
         ObjectMapper objectMapper = new ObjectMapper();
-        List<DeviceBo>
-                deviceBos =
+        List<DeviceBo> deviceBos =
                 objectMapper.readValue(response.getBody(), new TypeReference<List<DeviceBo>>() {
                 });
 

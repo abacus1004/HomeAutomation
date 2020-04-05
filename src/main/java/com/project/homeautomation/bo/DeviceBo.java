@@ -8,11 +8,12 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.io.Serializable;
+
 
 @Builder
 public @Data @NoArgsConstructor @AllArgsConstructor
-class DeviceBo {
-
+class DeviceBo implements Serializable {
 
 	public String getDeviceName() {
 		return deviceName;
@@ -37,7 +38,7 @@ class DeviceBo {
 	public void setUserId(String userId) {
 		this.userId = userId;
 	}
-
+	
 	private String deviceName;
 	private long deviceId;
 	private String userId;
