@@ -1,11 +1,5 @@
 package com.project.homeautomation;
 
-
-import com.capillary.platforms.catalogserviceclient.api.ProductPriceListApi;
-import com.capillary.platforms.catalogserviceclient.api.TaskApi;
-import com.capillary.platforms.ecom_backend_core.ApiClient;
-import com.capillary.platforms.ecom_backend_core.api.*;
-import com.capillary.platforms.fileservice.api.LegacycontrollerApi;
 import com.squareup.okhttp.ConnectionPool;
 import io.micrometer.core.instrument.MeterRegistry;
 import org.springframework.beans.factory.annotation.Autowired;
